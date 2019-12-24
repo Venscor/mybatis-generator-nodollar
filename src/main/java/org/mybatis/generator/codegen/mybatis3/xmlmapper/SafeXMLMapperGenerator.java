@@ -1,10 +1,10 @@
 package org.mybatis.generator.codegen.mybatis3.xmlmapper;
 
 
+import org.mybatis.generator.codegen.mybatis3.xmlmapper.elements.SafeSelectByExampleWithBLOBsElementGenerator;
 import org.mybatis.generator.codegen.mybatis3.xmlmapper.elements.SafeSelectByExampleWithoutBLOBsElementGenerator;
 import org.mybatis.generator.api.dom.xml.XmlElement;
 import org.mybatis.generator.codegen.mybatis3.xmlmapper.elements.AbstractXmlElementGenerator;
-import org.mybatis.generator.codegen.mybatis3.xmlmapper.elements.SelectByExampleWithBLOBsElementGenerator;
 
 /**
  * @author: Venscor
@@ -23,7 +23,7 @@ public class SafeXMLMapperGenerator extends XMLMapperGenerator {
     @Override
     protected void addSelectByExampleWithBLOBsElement(XmlElement parentElement) {
         if (this.introspectedTable.getRules().generateSelectByExampleWithBLOBs()) {
-            AbstractXmlElementGenerator elementGenerator = new SelectByExampleWithBLOBsElementGenerator();
+            AbstractXmlElementGenerator elementGenerator = new SafeSelectByExampleWithBLOBsElementGenerator();
             this.initializeAndExecuteGenerator(elementGenerator, parentElement);
         }
     }
