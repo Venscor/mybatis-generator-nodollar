@@ -34,13 +34,13 @@ public class SafeIntrospectedTableMyBatis3Impl extends IntrospectedTableMyBatis3
 
         AbstractJavaClientGenerator javaGenerator;
         if ("XMLMAPPER".equalsIgnoreCase(type)) { //$NON-NLS-1$
-            javaGenerator = new SafeJavaMapperGenerator(getClientProject());
+            javaGenerator = new SafeJavaMapperGenerator();
         } else if ("MIXEDMAPPER".equalsIgnoreCase(type)) { //$NON-NLS-1$
-            javaGenerator = new SafeMixedClientGenerator(getClientProject());
+            javaGenerator = new SafeMixedClientGenerator();
         } else if ("ANNOTATEDMAPPER".equalsIgnoreCase(type)) { //$NON-NLS-1$
-            javaGenerator = new SafeAnnotatedClientGenerator(getClientProject());
+            javaGenerator = new SafeAnnotatedClientGenerator();
         } else if ("MAPPER".equalsIgnoreCase(type)) { //$NON-NLS-1$
-            javaGenerator = new SafeJavaMapperGenerator(getClientProject());
+            javaGenerator = new SafeJavaMapperGenerator();
         } else {
             javaGenerator = (AbstractJavaClientGenerator) ObjectFactory
                     .createInternalObject(type);
@@ -67,31 +67,31 @@ public class SafeIntrospectedTableMyBatis3Impl extends IntrospectedTableMyBatis3
     protected void calculateJavaModelGenerators(List<String> warnings,
                                                 ProgressCallback progressCallback) {
         if (getRules().generateExampleClass()) {
-            AbstractJavaGenerator javaGenerator = new SafeExampleGenerator(getExampleProject());
+            AbstractJavaGenerator javaGenerator = new SafeExampleGenerator();
             initializeAbstractGenerator(javaGenerator, warnings,
                     progressCallback);
-            javaGenerators.add(javaGenerator);
+            javaModelGenerators.add(javaGenerator);
         }
 
         if (getRules().generatePrimaryKeyClass()) {
-            AbstractJavaGenerator javaGenerator = new PrimaryKeyGenerator(getModelProject());
+            AbstractJavaGenerator javaGenerator = new PrimaryKeyGenerator();
             initializeAbstractGenerator(javaGenerator, warnings,
                     progressCallback);
-            javaGenerators.add(javaGenerator);
+            javaModelGenerators.add(javaGenerator);
         }
 
         if (getRules().generateBaseRecordClass()) {
-            AbstractJavaGenerator javaGenerator = new BaseRecordGenerator(getModelProject());
+            AbstractJavaGenerator javaGenerator = new BaseRecordGenerator();
             initializeAbstractGenerator(javaGenerator, warnings,
                     progressCallback);
-            javaGenerators.add(javaGenerator);
+            javaModelGenerators.add(javaGenerator);
         }
 
         if (getRules().generateRecordWithBLOBsClass()) {
-            AbstractJavaGenerator javaGenerator = new RecordWithBLOBsGenerator(getModelProject());
+            AbstractJavaGenerator javaGenerator = new RecordWithBLOBsGenerator();
             initializeAbstractGenerator(javaGenerator, warnings,
                     progressCallback);
-            javaGenerators.add(javaGenerator);
+            javaModelGenerators.add(javaGenerator);
         }
     }
 }

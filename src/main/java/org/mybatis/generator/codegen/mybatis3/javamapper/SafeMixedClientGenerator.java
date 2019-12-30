@@ -11,10 +11,11 @@ import org.mybatis.generator.codegen.mybatis3.xmlmapper.SafeMixedMapperGenerator
  * @date: 2019/12/23
  * @description
  */
-public class SafeMixedClientGenerator extends SafeJavaMapperGenerator{
-    public SafeMixedClientGenerator(String project) {
-        super(project);
+public class SafeMixedClientGenerator extends SafeJavaMapperGenerator {
+    public SafeMixedClientGenerator() {
+        super();
     }
+
     @Override
     protected void addDeleteByPrimaryKeyMethod(Interface interfaze) {
         if (introspectedTable.getRules().generateDeleteByPrimaryKey()) {

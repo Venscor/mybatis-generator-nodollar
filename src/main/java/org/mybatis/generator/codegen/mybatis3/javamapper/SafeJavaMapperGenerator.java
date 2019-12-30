@@ -9,12 +9,12 @@ import org.mybatis.generator.codegen.mybatis3.xmlmapper.SafeXMLMapperGenerator;
  * @description
  */
 public class SafeJavaMapperGenerator extends JavaMapperGenerator {
-    public SafeJavaMapperGenerator(String project) {
-        super(project);
+    public SafeJavaMapperGenerator() {
+        super();
     }
 
     public SafeJavaMapperGenerator(String project, boolean requiresMatchedXMLGenerator) {
-        super(project, requiresMatchedXMLGenerator);
+        super(requiresMatchedXMLGenerator);
     }
 
     @Override

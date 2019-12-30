@@ -12,9 +12,9 @@ import java.util.List;
  * @date: 2019/12/23
  * @description
  */
-public class SafeAnnotatedClientGenerator extends AnnotatedClientGenerator{
-    public SafeAnnotatedClientGenerator(String project) {
-        super(project);
+public class SafeAnnotatedClientGenerator extends AnnotatedClientGenerator {
+    public SafeAnnotatedClientGenerator() {
+        super();
     }
 
 
@@ -27,7 +27,7 @@ public class SafeAnnotatedClientGenerator extends AnnotatedClientGenerator{
         if (StringUtility.stringHasValue(prop)) {
             useLegacyBuilder = Boolean.valueOf(prop);
         }
-        SqlProviderGenerator sqlProviderGenerator = new SafeSqlProviderGenerator(getProject(), useLegacyBuilder);
+        SqlProviderGenerator sqlProviderGenerator = new SafeSqlProviderGenerator(useLegacyBuilder);
         sqlProviderGenerator.setContext(context);
         sqlProviderGenerator.setIntrospectedTable(introspectedTable);
         sqlProviderGenerator.setProgressCallback(progressCallback);

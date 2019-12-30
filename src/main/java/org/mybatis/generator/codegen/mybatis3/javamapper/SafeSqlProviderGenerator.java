@@ -12,8 +12,8 @@ import org.mybatis.generator.codegen.mybatis3.javamapper.elements.sqlprovider.*;
 public class SafeSqlProviderGenerator extends SqlProviderGenerator {
     private boolean useLegacyBuilder;
 
-    public SafeSqlProviderGenerator(String project, boolean useLegacyBuilder) {
-        super(project, useLegacyBuilder);
+    public SafeSqlProviderGenerator(boolean useLegacyBuilder) {
+        super(useLegacyBuilder);
         this.useLegacyBuilder = useLegacyBuilder;
     }
 
