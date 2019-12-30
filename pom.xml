@@ -6,14 +6,6 @@
     <artifactId>mybatis-generator3.x-nosqldollar-plugin</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <scm>
-        <connection>scm:git:git@git.corp.kuaishou.com:wangyu07/mybatis-generator-plugin-nodollar</connection>
-        <developerConnection>scm:git:git@git.corp.kuaishou.com:wangyu07/mybatis-generator-plugin-nodollar
-        </developerConnection>
-        <tag>HEAD</tag>
-    </scm>
-
-
     <properties>
         <mybatis.generator.versioin>1.3.7</mybatis.generator.versioin>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -28,20 +20,6 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
-    <!-- 发布位置配置 -->
-    <distributionManagement>
-        <repository>
-            <id>kuaishou.releases</id>
-            <name>Internal Release Repository</name>
-            <url>http://nexus.corp.kuaishou.com:88/nexus/content/repositories/releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>kuaishou.snapshots</id>
-            <name>Internal Snapshot Repository</name>
-            <url>http://nexus.corp.kuaishou.com:88/nexus/content/repositories/snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
 
     <build>
         <plugins>
