@@ -4,7 +4,7 @@
 
     <groupId>com.venscor.codesec</groupId>
     <artifactId>mybatis-generator-nosqldollar-plugin</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.2-SNAPSHOT</version>
 
     <scm>
         <connection>scm:git:git@git.corp.kuaishou.com:wangyu07/mybatis-generator-plugin-nodollar</connection>
