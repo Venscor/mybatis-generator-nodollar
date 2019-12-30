@@ -21,17 +21,17 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.mybatis.generator</groupId>
-            <artifactId>mybatis-generator-maven-plugin</artifactId>
-            <version>${mybatis.generator.versioin}</version>
-            <exclusions>
-                <exclusion>
-                    <artifactId>mybatis-generator-core</artifactId>
-                    <groupId>org.mybatis.generator</groupId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.mybatis.generator</groupId>-->
+<!--            <artifactId>mybatis-generator-maven-plugin</artifactId>-->
+<!--            <version>${mybatis.generator.versioin}</version>-->
+<!--            <exclusions>-->
+<!--                <exclusion>-->
+<!--                    <artifactId>mybatis-generator-core</artifactId>-->
+<!--                    <groupId>org.mybatis.generator</groupId>-->
+<!--                </exclusion>-->
+<!--            </exclusions>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.mybatis.generator</groupId>
