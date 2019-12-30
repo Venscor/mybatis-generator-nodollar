@@ -41,6 +41,20 @@
         </dependency>
     </dependencies>
 
+    <!-- 发布位置配置 -->
+    <distributionManagement>
+        <repository>
+            <id>kuaishou.releases</id>
+            <name>Internal Release Repository</name>
+            <url>http://nexus.corp.kuaishou.com:88/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>kuaishou.snapshots</id>
+            <name>Internal Snapshot Repository</name>
+            <url>http://nexus.corp.kuaishou.com:88/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <build>
         <plugins>
             <plugin>
