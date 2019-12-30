@@ -15,24 +15,12 @@
 
 
     <properties>
-        <mybatis.generator.versioin>1.4.0</mybatis.generator.versioin>
+        <mybatis.generator.versioin>1.3.7</mybatis.generator.versioin>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>org.mybatis.generator</groupId>-->
-<!--            <artifactId>mybatis-generator-maven-plugin</artifactId>-->
-<!--            <version>${mybatis.generator.versioin}</version>-->
-<!--            <exclusions>-->
-<!--                <exclusion>-->
-<!--                    <artifactId>mybatis-generator-core</artifactId>-->
-<!--                    <groupId>org.mybatis.generator</groupId>-->
-<!--                </exclusion>-->
-<!--            </exclusions>-->
-<!--        </dependency>-->
-
         <dependency>
             <groupId>org.mybatis.generator</groupId>
             <artifactId>mybatis-generator-core</artifactId>
