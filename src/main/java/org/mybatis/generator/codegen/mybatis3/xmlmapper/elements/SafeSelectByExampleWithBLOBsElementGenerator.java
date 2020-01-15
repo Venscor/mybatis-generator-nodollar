@@ -24,11 +24,11 @@ public class SafeSelectByExampleWithBLOBsElementGenerator extends SelectByExampl
         String fqjt = introspectedTable.getExampleType();
 
         XmlElement answer = new XmlElement("select"); //$NON-NLS-1$
-
-        answer.addAttribute(new Attribute("id", //$NON-NLS-1$
-                introspectedTable.getSelectByExampleStatementId()));
+        answer
+                .addAttribute(new Attribute(
+                        "id", introspectedTable.getSelectByExampleWithBLOBsStatementId())); //$NON-NLS-1$
         answer.addAttribute(new Attribute(
-                "resultMap", introspectedTable.getBaseResultMapId())); //$NON-NLS-1$
+                "resultMap", introspectedTable.getResultMapWithBLOBsId())); //$NON-NLS-1$
         answer.addAttribute(new Attribute("parameterType", fqjt)); //$NON-NLS-1$
 
         context.getCommentGenerator().addComment(answer);
@@ -47,7 +47,10 @@ public class SafeSelectByExampleWithBLOBsElementGenerator extends SelectByExampl
             sb.append("' as QUERYID,"); //$NON-NLS-1$
             answer.addElement(new TextElement(sb.toString()));
         }
+
         answer.addElement(getBaseColumnListElement());
+        answer.addElement(new TextElement(",")); //$NON-NLS-1$
+        answer.addElement(getBlobColumnListElement());
 
         sb.setLength(0);
         sb.append("from "); //$NON-NLS-1$
